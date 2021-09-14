@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block head_title %} Home! {% endblock head_title %}
+
+{% block content %}
+<div class='row text-center'>
+    <div class='col'>
+        <h1>Welcome to STL Properties Extraction App</h1>
+    </div>
+</div>
+<div></br></div>
+
+<div class="row text-center" id="file-form">
+    <form method='POST' enctype="multipart/form-data"> 
+        {% csrf_token %}
+        {{form}}
+        <input id="id_stlfile" type='submit' value ='Submit' name ='stlfile'>
+    </form>
+</div>
+
+{% endblock content %}
